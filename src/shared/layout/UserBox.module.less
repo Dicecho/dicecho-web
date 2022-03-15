@@ -1,0 +1,38 @@
+@import '~antd/lib/style/themes/dark.less';
+
+
+.userBox {
+  width: 200px;
+}
+
+.boxHeader {
+  padding: 8px;
+  border-bottom: 1px solid @border-color-split;
+  .nickname {
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+    text-align: center;
+  }
+}
+
+.boxList {
+  padding: 8px;
+  .boxListItem {
+    padding: 8px;
+    border-radius: @border-radius-base;
+    transition: all .3s;
+    cursor: pointer;
+    .boxListItemIcon {
+      margin-right: 8px;
+    }
+
+    &.danger {
+      color: @error-color;
+    }
+
+    &:hover {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+}

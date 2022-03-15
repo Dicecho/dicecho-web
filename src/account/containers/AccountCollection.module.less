@@ -1,0 +1,78 @@
+@import "~antd/lib/style/themes/dark.less";
+
+
+.siderCard {
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+  .siderCardHeader {
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+    border-bottom: 1px solid @border-color-split;
+    display: flex;
+    align-items: center;
+  }
+
+  .siderCardContent {
+    .siderCardItem {
+      cursor: pointer;
+      user-select: none;
+      
+      .siderCardTab {
+        display: flex;
+        align-items: center;
+        transition: all .3s;
+        color: @text-color;
+        padding: 16px;
+      }
+
+    }
+  
+    .siderCardItem:not(:last-child) {
+      .siderCardTab {
+        border-bottom: 1px solid @border-color-base;
+      }
+    }
+
+    .siderCardItem:hover,
+    .siderCardItemActive {
+      .siderCardTab {
+        background-color: fade(@primary-color, 5%);
+      }
+    }
+
+  }
+}
+
+.mobileCard {
+  :global {
+    .ant-card-body {
+      padding: 8px 0;
+    }
+  }
+}
+
+.collectionItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 16px;
+  border-radius: @border-radius-base;
+  .collectionItemHeader {
+    display: flex;
+    color: @text-color;
+  }
+  .collectionItemInfo {
+    font-size: 12px;
+    color: @text-color-secondary;
+  }
+
+  &:hover {
+    background: rgba(0,0,0,0.1);
+  }
+}

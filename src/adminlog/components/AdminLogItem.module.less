@@ -1,0 +1,18 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.adminLogItem {
+  .adminLog {
+
+  }
+  .adminLogSnapshot {
+    background: rgba(0,0,0,0.2);
+    padding: 16px;
+    border-radius: @border-radius-base;
+  }
+
+  & + & {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid @border-color-base;
+  }
+}

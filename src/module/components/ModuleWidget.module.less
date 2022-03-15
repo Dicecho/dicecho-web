@@ -1,0 +1,76 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.mod {
+  display: flex;
+  background: rgba(255,255,255,.05);
+  padding: 8px;
+  border-radius: @border-radius-base;
+  width: 100%;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+
+  &.clickable {
+    cursor: pointer;
+    &:hover {
+      background: rgba(255,255,255,.1);
+      
+      .modTitle {
+        color: @primary-color;
+      }
+    }
+  }
+
+  .modMask {
+    filter: blur(6px) brightness(0.4);
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &.tiny {
+    .modCover {
+      width: 45px;
+      height: 60px;
+    }
+  }
+
+  .modCover {
+    z-index: 1;
+    width: 90px;
+    height: 120px;
+    background-size: cover !important;
+    background-position: center !important;
+    margin-right: 16px;
+  }
+
+  .modMain {
+    flex: 1;
+    z-index: 1;
+    overflow: hidden;
+    .modTitle {
+      display: flex;
+      align-items: center;
+      color: @heading-color;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all .3s;
+      .modRate {
+        color: #dbc21b;
+      }
+      .modRateCount {
+        color: @text-color-secondary;
+        font-size: 0.8rem;
+      }
+    }
+    .modDescription {
+      color: @text-color-secondary;
+      white-space: pre-wrap;
+    }
+  }
+
+}

@@ -1,0 +1,96 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.cardWrapper {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 50%;
+  }
+}
+
+.card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: @text-color;
+  // position: relative;
+  overflow: hidden;
+  border-radius: @border-radius-base;
+}
+
+.cardBg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: @component-background;
+
+  .cardBgImg {
+    background-size: cover!important;
+    background-position: 50%!important;
+    width: 100%;
+    height: 100%;
+    &::after {
+      content: "";
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0), fade(@component-background, 60%) 40%, @component-background);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;    
+      filter: brightness(0.7);
+    }
+  }
+}
+
+.cardMain {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .cardInfo {
+    display: flex;
+    align-items: center;
+    .userNickname {
+      color: @heading-color;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .userNote {
+      font-size: 12px;
+      // color: @text-color-secondary;
+    }
+  }
+
+  .cardAction {
+    margin-top: auto;
+    display: flex;
+    .cardData {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+  }
+}
+
+.loadingPage {
+  background: @component-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.userDataItem {
+  color: @text-color;
+  transition: all .3s;
+  &:hover {
+    color: @primary-color;
+  }
+}

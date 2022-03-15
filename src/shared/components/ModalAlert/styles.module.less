@@ -1,0 +1,33 @@
+@import '~antd/lib/style/themes/dark.less';
+.alert {
+  :global {
+    .ant-modal-content {
+      background-color: fade(@component-background, 75%);
+      backdrop-filter: blur(10px);
+      .ant-modal-body {
+        padding: 0px;
+        .ant-modal-confirm-body {
+          padding: 16px 16px 0 16px;
+          .ant-modal-confirm-title {
+            text-align: center;
+          }
+          .ant-modal-confirm-content {
+            text-align: center;
+          }
+        }
+        .ant-modal-confirm-btns {
+          display: flex;
+          width: 100%;
+          border-top: 1px solid @border-color-base;
+          .ant-modal-confirm-btn {
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid @border-color-base;
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,23 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.tag {
+  color: @text-color;
+  cursor: pointer;
+  transition: all .3s;
+  
+
+  &:hover {
+    color: @primary-color;
+  }
+
+  & + & {
+    &::before {
+      content: '/';
+      margin-left: 8px;
+      margin-right: 8px;
+      color: @text-color-secondary;
+    }
+  }
+}
+
+

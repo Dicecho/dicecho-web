@@ -1,0 +1,7 @@
+export enum BaseErrorCode {
+  UNKNOWN_ERROR = 999,
+  BAD_REQUEST = 1000,
+  FORBIDDEN = 1003,
+  NOT_FOUND = 1004,
+  CONFLICT = 1009,
+}

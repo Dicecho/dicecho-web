@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitThis": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "shared/*": [
+        "./src/shared/*"
+      ],
+      "interfaces/*": [
+        "./src/interfaces/*"
+      ],
+      "assets/*": [
+        "./src/assets/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "src/react-app-env.d.ts"
+  ]
+}

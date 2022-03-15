@@ -1,0 +1,57 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.relatedModuleItem {
+  padding: 8px 0px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  .relatedModuleCoverBox {
+    // flex: 1;
+    height: 50px;
+    min-width: 37.5px;
+    margin-right: 8px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+  }
+  .relatedModuleMain {
+    flex: 1;
+    overflow: hidden;
+  }
+  .relatedModuleItemHeader {
+    margin-bottom: 4px;
+    display: flex;
+    .relatedModuleItemTitle {
+      transition: all .3s;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: bold;
+      flex: 1;
+    }
+    .relatedModuleItemRate {
+      font-weight: bold;
+      color: #dbc21b;
+    }
+    .relatedModuleItemRateCount {
+      color: @text-color-secondary;
+      font-size: 0.8rem;
+    }
+  }
+
+  .relatedModuleItemAuthor {
+    color: @text-color-secondary;
+  }
+
+  &:hover {
+    .relatedModuleItemTitle {
+      color: @primary-color;
+    }
+
+
+  }
+
+  & + & {
+    border-top: 1px solid @border-color-base;
+  }
+}

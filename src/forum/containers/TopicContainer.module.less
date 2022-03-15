@@ -1,0 +1,102 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.topicDetailHeader {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  // background-color: fade(@menu-dark-bg, 100%);
+  // transition: all .3s;
+}
+
+.topicDetailFooter {
+  height: auto;
+  padding: 8px 16px !important;
+}
+
+.footerInput {
+  :global {
+    .ant-input {
+      border: 0px;
+      background: rgba(0,0,0,0.2);
+      // border-radius: 20px;
+    }
+  }
+}
+
+.topic {
+  .topicTitle {
+    // font-size: 1rem;
+    color: @heading-color;
+    font-weight: bold;
+
+  }
+
+  .topicInfo {
+    display: flex;
+    color: @text-color-secondary;
+
+  }
+
+  .topicContent {
+
+  }
+
+  .topicFooterInfo {
+    color: @text-color-secondary;
+  }
+
+  .topicActions {
+    display: flex;
+    align-items: center;
+    margin-left: -4px;
+
+    .action {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 4px 8px;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        color: rgb(29,161,242);
+        &.danger {
+          color: @error-color;
+        }
+      }
+    }
+  }
+
+  .comment {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 4px 8px;
+  }
+}
+
+
+.infoItem {
+  & + & {
+    margin-left: 16px;
+  }
+}
+
+.topicAuthor {
+  display: flex;
+  align-items: center;
+} 
+
+.loadingPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  height: 100vh;
+}
+
+
+.headerTitle {
+  max-width: calc(100% - 100px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

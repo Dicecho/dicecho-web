@@ -1,0 +1,44 @@
+@import "~antd/lib/style/themes/dark.less";
+
+
+.userProfile {
+  text-align: center;
+  border-bottom: 1px solid @border-color-base;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+
+  .userNickname {
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+  }
+
+  .userNote {
+    color: @text-color-secondary;
+  }
+
+
+  .userData {
+    margin: 0px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+
+    .userDataItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        color: @primary-color;
+      }
+  
+      .userDataItemCount {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '~antd/lib/style/themes/dark.less';
+
+
+.appInfo {
+  color: @text-color-secondary !important;
+
+  .appInfoList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px -8px;
+  }
+
+  .appInfoItem {
+    margin: 4px 8px;
+    margin-bottom: 8px;
+    color: @text-color;
+    // font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: all .3s;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import "~antd/lib/style/themes/dark.less";
+
+.card {
+  :global {
+    .ant-card-head {
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+
+      .ant-card-head-wrapper {
+        flex: 1;
+      }
+
+      .ant-card-head-title {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.homepage {
+
+}
+
+.homepageBanner {
+  height: 300px;
+
+  @media screen and (max-width: 767px) {
+    height: 160px;
+  }
+  overflow: hidden;
+  // display: flex !important;
+  align-items: center;
+  border-radius: @border-radius-base;
+  position: relative;
+  .homepageBannerImgWrapper {
+    height: 300px;
+
+    @media screen and (max-width: 767px) {
+      height: 160px;
+    }
+
+    .homepageBannerImg {
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      // position: absolute;
+      // top: 0;
+      // bottom: 0;
+      // left: 0;
+      // right: 0;
+      // width: 100%;
+    }
+  }
+}
+
+.userProfile {
+  text-align: center;
+  border-bottom: 1px solid @border-color-base;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+
+  .userNickname {
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+  }
+
+  .userNote {
+    color: @text-color-secondary;
+  }
+
+
+  .userData {
+    margin: 0px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+
+    .userDataItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        color: @primary-color;
+      }
+  
+      .userDataItemCount {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.discordBrand {
+  background: #5865F2;
+  border-radius: @border-radius-base;
+  color: white;
+
+  padding: 16px 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+
+  .blockTitle {
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+  }
+}

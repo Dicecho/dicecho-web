@@ -1,0 +1,47 @@
+@import "~antd/lib/style/themes/dark.less";
+
+.notificationBox {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxHeader {
+  background: rgba(0,0,0,0.2);
+}
+
+.boxHeaderTabs {
+  margin-bottom: 8px;
+  :global {
+    .ant-tabs-nav {
+      margin-bottom: 0px !important;
+      .ant-tabs-nav-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .ant-tabs-tab {
+          margin: 0px 16px;
+        }
+      }
+    }
+  }
+}
+
+.boxList {
+  flex: 1;
+  padding: 0px 16px;
+  .empty {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.boxFooter {
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+}

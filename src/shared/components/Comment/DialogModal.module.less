@@ -1,0 +1,69 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.dialogModal {
+  :global {
+    .ant-modal-content {
+      .ant-modal-body {
+        padding: 0;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  background-color: @modal-content-bg;
+  padding: 8px 24px;
+  border-bottom: solid 1px @border-color-base;
+}
+
+.content {
+  flex: 1;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-right: -15px;
+}
+
+.parent {
+  background-color: @modal-content-bg;
+  padding: 8px 24px;
+  margin-bottom: 16px;
+  // border-bottom: solid 1px @border-color-base;
+}
+
+.list {
+  background-color: @modal-content-bg;
+  padding: 16px 24px;
+  flex: 1;
+}
+
+.footer {
+  background-color: @modal-content-bg;
+  padding: 16px 24px 16px;
+  border-top: solid 1px @border-color-base;
+}
+
+.clickableText {
+  user-select: none;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    color: @primary-color;
+  }
+}

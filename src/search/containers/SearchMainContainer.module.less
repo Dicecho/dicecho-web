@@ -1,0 +1,27 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.collectTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: @heading-color;
+  .collectInfo {
+    color: @text-color-secondary;
+  }
+  .collectAction {
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+
+.loadingPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 300px;
+  .loadingText {
+    color: @primary-color;
+  }
+}

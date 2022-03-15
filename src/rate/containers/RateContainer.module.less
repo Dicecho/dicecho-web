@@ -1,0 +1,58 @@
+@import '~antd/lib/style/themes/dark.less';
+
+
+.topic {
+  .topicTitle {
+    // font-size: 1rem;
+    color: @heading-color;
+    font-weight: bold;
+
+  }
+
+  .topicInfo {
+    display: flex;
+    color: @text-color-secondary;
+
+  }
+
+  .topicContent {
+
+  }
+
+  .topicFooterInfo {
+    color: @text-color-secondary;
+  }
+
+  .topicActions {
+    display: flex;
+    align-items: center;
+    margin-left: -4px;
+  }
+
+  .comment {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 4px 8px;
+  }
+}
+
+
+.infoItem {
+  & + & {
+    margin-left: 16px;
+  }
+}
+
+.topicAuthor {
+  display: flex;
+  align-items: center;
+} 
+
+.loadingPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  height: 100vh;
+}

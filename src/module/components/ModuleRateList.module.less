@@ -1,0 +1,97 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.list {
+
+}
+
+.rateList {
+  :global {
+    .ant-card-head .ant-tabs {
+      margin-bottom: 0;
+    }
+    .ant-card-head {
+      padding: 0;
+      border: 0;
+      .ant-card-head-title {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.rateTabs {
+  :global {
+    .ant-tabs-nav {
+      padding: 8px 16px;
+      margin-bottom: 0 !important;
+      .ant-tabs-nav-wrap {
+        margin-bottom: -8px;
+          .ant-tabs-tab {
+            @media screen and (max-width: 767px) {  
+              padding: 0;
+              margin-top: -8px;
+            }
+            @media screen and (min-width: 768px) {  
+              padding: 4px 16px 8px;
+              font-size: 1rem;
+            }
+        }
+      }
+    }
+  }
+}
+
+.rateListHeader {
+  display: flex;
+  align-items: center;
+  .rateListHeaderBtn {
+    margin-left: auto;
+  }
+}
+
+.sortSelectorGroup {
+  display: flex;
+  align-items: center;
+  .sortSelector {
+    flex: 1;
+    margin-right: -1px;
+    :global {
+      .ant-select-selector {
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+      }
+    }
+  }
+  .sortSelectorBtn {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+}
+
+.filterItem {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    & + & {
+      margin-top: 16px;
+    }
+  }
+  @media screen and (min-width: 768px) {  
+    margin: 4px !important;
+  }
+}
+
+
+.backTop {
+  background: @primary-color;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 10px #9396f7ff;
+}
+
+ 

@@ -1,0 +1,41 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.moduleInfo {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  white-space: pre-line;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+
+  .fileName {
+    flex: 1;
+  }
+
+  .fileInfo {
+    margin-left: auto;
+    color: @text-color-secondary;
+  }
+
+  .fileActions {
+    margin-left: 16px;
+    :global {
+      .ant-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .download {
+      color: @primary-color;
+      cursor: pointer;
+    }
+  }
+
+  & + & {
+    border-top: 1px dashed @border-color-split;
+  }
+}

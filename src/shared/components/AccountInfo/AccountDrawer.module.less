@@ -1,0 +1,158 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.drawer {
+  :global {
+    .ant-drawer-body {
+      border-top-left-radius: @border-radius-base;
+      border-top-right-radius: @border-radius-base;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+}
+
+.cardBg {
+  background-size: cover!important;
+  background-position: 50%!important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &::after {
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), fade(@component-background, 60%) 40%, @component-background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    filter: brightness(0.7);
+  }
+}
+
+.cardMain {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .cardInfo {
+    display: flex;
+    align-items: center;
+    .userNickname {
+      color: @heading-color;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .userNote {
+      font-size: 12px;
+      // color: @text-color-secondary;
+    }
+  }
+
+  .cardAction {
+    margin-top: auto;
+    display: flex;
+    .cardData {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+  }
+}
+
+.loadingPage {
+  background: @component-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.userDataItem {
+  color: @text-color;
+  transition: all .3s;
+  &:hover {
+    color: @primary-color;
+  }
+}
+
+
+.mobileUserHeader {
+  background: @component-background;
+  .userBackground {
+    height: 168px;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    filter: brightness(0.7);
+  }
+  .userInfo {
+    display: flex;
+    align-items: flex-end;
+    margin-top: -8px;
+
+    .userAvatarEdit {
+      margin-right: 24px;
+      :global {
+        .ant-upload {
+          box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+
+    .userAvatar {
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .userData {
+    display: flex;
+    margin-top: 8px;
+    padding-top: 8px;
+    justify-content: space-between;
+    align-items: center;
+
+    .userDataItem {
+      color: @text-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+  
+      .userDataItemCount {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .userNickname {
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+    z-index: 1;
+  }
+
+  .userNote {
+    color: @text-color-secondary;
+  }
+
+  .headerTabs {
+    border-top: 1px solid @border-color-base;
+    height: 40px;
+    padding-top: 8px;
+  }
+
+  .headerTab {
+    font-size: 14px;
+  }
+}
+
+.userAction {
+  display: flex;
+  align-items: center;
+}

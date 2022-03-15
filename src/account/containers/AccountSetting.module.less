@@ -1,0 +1,44 @@
+@import "~antd/lib/style/themes/dark.less";
+
+
+.siderCard {
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+  .siderCardHeader {
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+    border-bottom: 1px solid @border-color-split;
+  }
+
+  .siderCardContent {
+    .siderCardItem {
+      .siderCardTab {
+        display: flex;
+        align-items: center;
+        transition: all .3s;
+        color: @text-color;
+        padding: 16px;
+      }
+
+    }
+  
+    .siderCardItem:not(:last-child) {
+      .siderCardTab {
+        border-bottom: 1px solid @border-color-base;
+      }
+    }
+
+    .siderCardItem:hover,
+    .siderCardItemActive {
+      .siderCardTab {
+        background-color: fade(@primary-color, 5%);
+      }
+    }
+
+  }
+}

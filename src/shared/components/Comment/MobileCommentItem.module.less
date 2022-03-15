@@ -1,0 +1,43 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.commentItem {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  .commentAvatar {
+    margin-top: 8px;
+  }
+  .commentMain {
+    flex: 1;
+    .commentUser {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: rgba(255,255,255,0.8);
+    }
+    .commentFooter {
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.8rem;
+    }
+  }
+
+  & + & {
+    margin-top: 16px;
+    .commentMain {
+      padding-top: 16px;
+      border-top: 1px solid @border-color-base;
+    }
+  }
+}
+
+.clickableText {
+  user-select: none;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    color: @primary-color;
+  }
+}

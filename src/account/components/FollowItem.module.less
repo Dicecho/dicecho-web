@@ -1,0 +1,12 @@
+@import "~antd/lib/style/themes/dark.less";
+
+.item {
+  display: flex;
+  align-items: center;
+
+  & + & {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid @border-color-base;
+  }
+}

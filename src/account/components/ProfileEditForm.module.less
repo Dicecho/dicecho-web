@@ -1,0 +1,36 @@
+@import "~antd/lib/style/themes/dark.less";
+
+.preview {
+  display: flex;
+  height: 254px;
+  flex-direction: column;
+  border-radius: @border-radius-base;
+  overflow: hidden;
+  // max-height: 240px;
+  .previewBackend {
+    flex: 1;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    filter: brightness(0.7);
+  }
+  .previewMain {
+    padding: 16px 8px;
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,.1);
+    .previewInfo {
+      flex: 1;
+      overflow: hidden;
+      .previewNickname {
+        font-size: 1rem;
+        font-weight: bold;
+        color: @heading-color;
+      }
+      .previewNote {
+        color: @text-color-secondary;
+
+      }
+    }
+  }
+}

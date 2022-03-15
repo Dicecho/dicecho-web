@@ -1,0 +1,107 @@
+@import '~antd/lib/style/themes/dark.less';
+
+
+.scrollView {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  flex: 1;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  border-top: 1px solid @border-color-base;
+  padding-top: 16px;
+  margin: 0px 16px;
+  min-height: 49px;
+}
+
+.collectionItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 16px;
+  border-radius: @border-radius-base;
+  .collectionItemHeader {
+    display: flex;
+  }
+  .collectionItemInfo {
+    font-size: 12px;
+    color: @text-color-secondary;
+  }
+
+  &:hover {
+    background: rgba(0,0,0,0.1);
+  }
+
+  .successToken {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all .3s;
+    &.active {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+
+.antModal {
+  :global {
+    .ant-modal-header {
+      padding: 16px;
+    }
+    .ant-modal-body {
+      height: 400px;
+      padding: 16px 0;
+    }
+  }
+}
+
+.antDrawer {
+  :global {
+    .ant-drawer-header {
+      padding: 16px;
+    }
+    .ant-drawer-body {
+      padding: 16px 0;
+      overflow: hidden;
+    }
+  }
+
+}
+
+
+
+.createCollectionInput {
+  background-color: rgba(0,0,0,0.2) !important;
+  transition: all .3s;
+  margin-right: -72px;
+
+  &.hasInput {
+    margin-right: 0;
+  }
+}
+
+.createCollectionBtn {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all .3s;
+
+  &.hasInput {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

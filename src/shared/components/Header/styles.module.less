@@ -1,0 +1,83 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.searchInput {
+  background-color: rgba(0,0,0,0.25) !important;
+  border-radius: 20px !important;
+  :global {
+    .ant-input-group-addon {
+      background: transparent;
+      .ant-input-search-button {
+        border: 0;
+      }
+    }
+  }
+}
+
+.drawerUser {
+  display: flex;
+
+  .drawerUserName {
+    color: @heading-color;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .drawerInfoHint {
+    color: @text-color-secondary;
+    font-size: 0.75rem;
+    align-items: center;
+  }
+
+  padding-bottom: 16px;
+  border-bottom: 1px solid @border-color-split;
+}
+
+.drawerList {
+  padding: 8px 8px 8px 0;
+  .drawerItem {
+    padding: 8px;
+    border-radius: @border-radius-base;
+    transition: all .3s;
+    cursor: pointer;
+    .drawerItemIcon {
+      margin-right: 8px;
+    }
+
+    &.danger {
+      color: @error-color;
+    }
+
+    &:hover {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+}
+
+.headerLayout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  height: 100%;
+
+  .headerLayoutLeft {
+    position: absolute;
+    left: 16px;
+  }
+
+  .headerLayoutTitle {
+    flex: 1;
+    text-align: center;
+  }
+
+  .headerLayoutRight {
+    position: absolute;
+    right: 16px;
+  }
+}
+
+.hedaerBack {
+  cursor: pointer;
+}

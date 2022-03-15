@@ -1,0 +1,64 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.actionSheet {
+  :global {
+    .ant-drawer-content-wrapper {
+      box-shadow: none !important;
+      .ant-drawer-content {
+        background: transparent;
+        .ant-drawer-body {
+          padding: 0 16px 16px;
+        }
+      }
+    }
+  }
+
+  .menu {
+    backdrop-filter: blur(30px);
+    background: rgba(237,237,237,0.8);
+    border-radius: 14px;
+    .menuOption + .menuOption {
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .cancel {
+    margin-top: 8px;
+    background: #fff;
+    border-radius: 14px;
+  }
+}
+
+.menuOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-align: center;
+  height: 56px;
+  padding: 8px 0;
+  color: #0084FF;
+  &.danger {
+    color: @error-color;
+  }
+}
+
+// .menuOption {
+//   color: #0084FF;
+//   &.danger {
+//     color: @error-color;
+//   }
+// }
+
+.actionSheet.black {
+  .menu {
+    background: fade(@component-background, 75%);
+
+    .menuOption + .menuOption {
+      border-top: 1px solid @border-color-base;
+    }
+  }
+  .cancel {
+    background: @component-background;
+  }
+}

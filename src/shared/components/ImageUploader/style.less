@@ -1,0 +1,37 @@
+.image-uploader {
+  height: 100%;
+  width: 100%;
+  .ant-upload.ant-upload-select.ant-upload-select-picture-card {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    .ant-upload {
+      padding: 0px;
+      .image-uploader-viewer {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        &:before {
+          content: "";
+          background-color: rgba(0,0,0,0.3);
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transition: all .3s;
+        }
+
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

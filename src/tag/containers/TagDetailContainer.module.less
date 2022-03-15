@@ -1,0 +1,32 @@
+@import "~antd/lib/style/themes/dark.less";
+
+
+.header {
+  :global {
+    .ant-card-body {
+      padding-bottom: 0;
+    }
+  }
+
+}
+
+.headerTabs {
+  display: flex;
+  height: 32px;
+
+  .headerTab {
+    color: @text-color;
+    border-bottom-width: 0px;
+    transition: all 0.3s;
+
+    margin: 0px 8px;
+    padding: 0px 8px 4px;
+  }
+
+  .headerTab:hover,
+  .headerTabActive {
+    color: @heading-color;
+    border-bottom: 2px solid @heading-color;
+    transition: all 0.3s;
+  }
+}

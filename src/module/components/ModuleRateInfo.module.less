@@ -1,0 +1,77 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.rateInfo {
+  border-radius: @border-radius-base;
+  background: rgba(0,0,0,0.25);
+  padding: 16px;
+
+  .rateInfoEmpty {
+    color: @text-color-secondary;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+  }
+
+  .rateInfoHeader {
+    color: @text-color-secondary;
+  }
+
+
+  .rateInfoContent {
+    display: flex;
+    align-items: center;
+    .rateAvg {
+      width: 30%;
+      min-width: 88px;
+      margin-left: -16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; 
+      color: @text-color-secondary;
+      font-size: 0.8rem; 
+
+      .highlight {
+        color: @primary-color;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+    .rateDetail {
+      flex: 1;
+      .rateInfoItem {
+        display: flex;
+        align-items: center;
+
+        .rateInfoItemRate {
+          line-height: 0.6rem;
+          font-size: 0.6rem;
+          margin-right: 4px;
+          :global {
+            .ant-rate-star {
+              margin-right: 2px !important;
+            }
+          }
+        }
+
+        .rateInfoItemProgress {
+          flex: 1;
+          line-height: 0.6rem;
+          font-size: 0.6rem;
+          :global {
+            .ant-progress-bg {
+              background-color: #dbc21b !important;
+            }
+          }
+        }
+      }
+
+      .rateInfoItem + .rateInfoItem {
+        margin-top: 4px;
+      }
+    }
+  }
+}

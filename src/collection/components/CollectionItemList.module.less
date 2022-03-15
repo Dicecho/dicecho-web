@@ -1,0 +1,28 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  background: @error-color;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: @text-color;
+}
+
+.loadingPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 300px;
+  .loadingText {
+    color: @primary-color;
+  }
+}

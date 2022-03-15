@@ -1,0 +1,63 @@
+@import '~antd/lib/style/themes/dark.less';
+
+
+.wrapper {
+  display: flex;
+  font-size: 14px;
+  font-weight: normal;
+  color: @text-color;
+  .avatar {
+    min-width: 160px;
+  }
+  .headerMain {
+    flex: 1;
+    overflow: hidden;
+    .title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: @heading-color;
+      display: flex;
+      align-items: center;
+      .editBtn {
+        display: flex;
+        align-items: center;
+        color: @text-color-secondary;
+        cursor: pointer;
+        user-select: none;
+        transition: all .3s;
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+
+  .user {
+    color: @text-color-secondary;
+  }
+
+  .info {
+    color: @text-color-secondary;
+  }
+
+  .descriptionBlock {
+    display: flex;
+    .description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre;
+      height: 22px;
+      &.unfold {
+        height: auto;
+        white-space: break-spaces;
+      }
+    }
+    .foldIcon {
+      display: flex;
+      height: 22px;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+}

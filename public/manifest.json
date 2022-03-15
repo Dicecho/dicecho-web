@@ -1,0 +1,31 @@
+{
+  "name": "骰声回响",
+  "short_name": "Dicecho",
+  "description": "TRPG一站式社区",
+  "icons": [
+    {
+      "src": "https://file.dicecho.com/images/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "https://file.dicecho.com/images/icon-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "https://file.dicecho.com/images/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://file.dicecho.com/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,90 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.replyInputArea {
+  display: flex;
+
+  .userAvatar {
+    // margin-right: 16px;
+  }
+
+  .textArea {
+    flex: 1;
+    resize: none;
+
+  }
+
+  .textAreaEmpty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+}
+
+.replyRichInputArea {
+
+  .textArea {
+    flex: 1;
+    resize: none;
+
+  }
+
+  .richTextAreaEmpty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    height: 200px;
+    background: rgba(0,0,0,0.3);
+    border: 0px;
+  }
+}
+
+.replyInputBtn {
+  pointer-events: none;
+  opacity: 0;
+  transition: all .3s;
+  transform: translate3d(100%, 0, 0);
+  position: relative;
+  width: 64px;
+  margin-left: -64px;
+
+  display: flex;
+  align-items: flex-end;
+  &.activeBtn {
+    margin-left: 8px;
+    pointer-events: auto;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

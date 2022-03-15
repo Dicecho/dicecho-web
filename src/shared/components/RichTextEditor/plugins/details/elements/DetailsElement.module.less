@@ -1,0 +1,33 @@
+@import "~antd/lib/style/themes/dark.less";
+
+.details {
+  background: rgba(0,0,0,.24);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.staticSummary {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.summary {
+  color: @heading-color;
+  background: linear-gradient(45deg,rgba(234,192,69,.3),rgba(234,192,69,.3) 25%,rgba(0,0,0,.3) 0,rgba(0,0,0,.3) 50%,rgba(234,192,69,.3) 0,rgba(234,192,69,.3) 75%,rgba(0,0,0,.3) 0,rgba(0,0,0,.3));
+  background-size: 40px 40px;
+}
+
+.summaryInput {
+  width: 100%;
+  padding: 8px 16px;
+  background: transparent;
+  outline: none;
+  border: 0;
+  &::placeholder {
+    color: @text-color-secondary;
+  }
+}
+
+.content {
+  padding: 16px;
+}

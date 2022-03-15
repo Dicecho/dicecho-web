@@ -1,0 +1,86 @@
+@import '~antd/lib/style/themes/dark.less';
+
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  overflow: hidden;
+
+  .mask {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(20px) brightness(0.7);
+    height: 100vh;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  // justify-content: center;
+  margin-top: 60px;
+  font-size: 14px;
+  font-weight: normal;
+  color: @text-color;
+  .headerMain {
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: @heading-color;
+    display: flex;
+    align-items: center;
+    .editBtn {
+      display: flex;
+      align-items: center;
+      color: @text-color-secondary;
+      cursor: pointer;
+      user-select: none;
+      transition: all .3s;
+      &:hover {
+        color: @primary-color;
+      }
+    }
+  }
+
+  .user {
+    color: @text-color-secondary;
+  }
+
+  .info {
+    color: @text-color-secondary;
+  }
+
+  .descriptionBlock {
+    display: flex;
+    margin-top: auto;
+    .description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre;
+      height: 22px;
+      &.unfold {
+        height: auto;
+        white-space: break-spaces;
+      }
+    }
+    .foldIcon {
+      display: flex;
+      height: 22px;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+}

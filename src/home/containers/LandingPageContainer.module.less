@@ -1,0 +1,75 @@
+@import "~antd/lib/style/themes/dark.less";
+
+
+.homepage {
+  margin-bottom: -44pt;
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+
+  .homepageBanner {
+    background-size: cover !important;
+    background-position: center top !important;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    &::after {
+      content: "";
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0), @component-background);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .homepageMain {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+    // width: 360px;
+    .homepageText {
+      color: white;
+      font-size: 2rem;
+    }
+
+    .homepageSlogan {
+      font-size: 1rem;
+      color: @heading-color;
+      border-bottom: 1px solid;
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+    }
+
+    .homepageInput {
+      max-width: 360px;
+      padding: 4px 16px;
+      background: white;
+      border-radius: 20px;
+      color: rgba(0, 0, 0, 0.85);
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.45)
+      }
+    }
+  }
+}

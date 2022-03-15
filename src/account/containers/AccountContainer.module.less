@@ -1,0 +1,192 @@
+@import "~antd/lib/style/themes/dark.less";
+
+.userHeader {
+  position: relative;
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+
+  .userBackground {
+    background-size: cover !important;
+    background-position: center !important;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &::after {
+      content: "";
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0), @body-background);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .userAvatarEdit {
+    :global {
+      .ant-upload {
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+
+  .userAvatar {
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .userNickname {
+    color: @heading-color;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .userData {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+
+    .userDataItem {
+      color: @text-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        color: @primary-color;
+      }
+  
+      .userDataItemCount {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.userMobileAction {
+  display: flex;
+  align-items: center;
+}
+
+.headerTabs {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  @media (max-width: 767px) {
+    background: @component-background;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .headerTab {
+    color: @text-color;
+    border-bottom-width: 0px;
+    transition: all 0.3s;
+
+    font-size: 1rem;
+
+    margin: 0px 8px;
+    padding: 0px 8px 4px;
+  }
+
+  .headerTab:hover,
+  .headerTabActive {
+    color: @heading-color;
+    border-bottom: 2px solid @heading-color;
+    transition: all 0.3s;
+  }
+}
+
+.mobileUserHeader {
+  background: @component-background;
+  .userBackground {
+    height: 168px;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    filter: brightness(0.7);
+  }
+  .userInfo {
+    display: flex;
+    align-items: flex-end;
+    margin-top: -8px;
+
+    .userAvatarEdit {
+      :global {
+        .ant-upload {
+          box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+
+    .userAvatar {
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .userData {
+    display: flex;
+    margin-top: 8px;
+    padding-top: 8px;
+    justify-content: space-between;
+    align-items: center;
+
+    .userDataItem {
+      color: @text-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+  
+      .userDataItemCount {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .userNickname {
+    font-size: 1rem;
+    font-weight: bold;
+    color: @heading-color;
+    z-index: 1;
+  }
+
+  .userNote {
+    color: @text-color-secondary;
+  }
+
+  .userDetail {
+    border-bottom: 1px solid @border-color-base;
+    margin-bottom: 8px;
+  }
+
+  .headerTab {
+    font-size: 14px;
+  }
+}
+
+
+.accountHeader {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: fade(@menu-dark-bg, 100%);
+  transition: all .3s;
+
+  &.transparent {
+    box-shadow: none;
+    background-color: fade(@menu-dark-bg, 0%);
+    transition: all .3s;
+  }
+}

@@ -1,0 +1,91 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.rateText {
+  margin-left: 32px;
+  color: rgba(255,255,255,0.8);
+  user-select: none;
+}
+
+.rateDrawer {
+  :global {
+    .ant-drawer-header {
+      padding: 8px 16px 0px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 48px;
+      .ant-drawer-header-title {
+        width: 100%;
+        .ant-drawer-title {
+          width: 100%;
+        }
+      }
+    }
+    .ant-drawer-body {
+      padding: 16px;
+      margin-top: 48px;
+    }
+  }
+}
+
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.domainSelect {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  min-width: 160px;
+  :global {
+    .ant-select-selector {
+      border: 0 !important;
+    }
+  }
+}
+
+.input {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border: 0 !important;
+}
+
+.relatedMod {
+  position: relative;
+  .close {
+    cursor: pointer;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    background: @error-color;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+}
+.relatedModAdd {
+  flex-direction: column;
+  padding: 8px 0;
+  font-size: 12px;
+  color: @text-color-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed @border-color-base;
+  border-radius: @border-radius-base;
+  cursor: pointer;
+  transition: all .3s;
+  :global {
+    .anticon {
+      font-size: 1rem;
+    }
+  }
+  &:hover {
+    border-color: @primary-color;
+    color: @primary-color;
+  }
+}

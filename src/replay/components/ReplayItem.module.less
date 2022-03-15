@@ -1,0 +1,119 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.card {
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    .cover {
+      transform: scale(1.2);
+    }
+    .coverMask {
+      background-color: rgba(0,0,0,0.3);
+    }
+  }
+
+  :global {
+    .ant-card-body {
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+.coverBox {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+
+  .coverMask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all .3s;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 61.8%;
+  }
+}
+
+.cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+.cardHeader {
+  overflow: hidden;
+  width: 100%;
+}
+
+.cardTitle {
+  margin-bottom: 4px !important;
+  color: @heading-color !important;
+}
+
+.moduleAuther {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.moduleInfo {
+  font-size: 12px;
+  color: @text-color-secondary-dark !important;
+  display: flex;
+  align-items: center;
+}
+
+
+.moduleRateInfo {
+  display: flex;
+  align-items: center;
+}
+
+.moduleRateEmpty {
+  color: @text-color-secondary;
+}
+
+.rateAvg {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: bold;
+  color: #dbc21b;
+}
+.rateCount {
+  font-size: 12px;
+  color: @text-color-secondary;
+}
+
+.rate {
+  line-height: 0.8rem !important;
+  font-size: 0.8rem !important;
+  :global {
+    .ant-rate-star {
+      &:not(:last-child) {
+        margin-right: 2px !important;
+      }
+
+    }
+  }
+}

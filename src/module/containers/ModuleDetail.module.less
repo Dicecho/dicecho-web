@@ -1,0 +1,261 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.loadingPage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  margin-bottom: 16px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  :global {
+    .ant-card-body {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.headerMain {
+  display: flex;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cover {
+  width: 120px;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,.3);
+  margin-top: -40px;
+  margin-right: 24px;
+}
+
+.headerContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerAction {
+  display: flex;
+  margin-top: auto;
+}
+
+.title {
+  max-height: 80px;
+  overflow: hidden;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255);
+}
+
+.headerInfo {
+  width: 120px;
+  padding-left: 16px;
+  margin-left: 16px;
+  border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+.rateNumber {
+  color: @primary-color;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+.rateEmpty {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.rateText {
+  color: rgba(255,255,255, 0.45);
+}
+
+.rateValue {
+  color: rgba(255,255,255, 0.45);
+}
+
+.headerTabs {
+  display: flex;
+  background: @component-background;
+  @media (max-width: 767px) {
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.headerTab {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  padding: 0px 8px;
+  height: 56px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: all .3s;
+
+  @media (max-width: 767px) {
+    height: 32px;
+    align-items: flex-start;
+  }
+
+  .headerTabText {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.45);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all .3s;
+  }
+}
+
+.headerTab:hover,
+.headerTabActive {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.85);
+  .headerTabText {
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+
+.description {
+  white-space: pre-line;
+}
+
+
+.moduleInfo {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  white-space: pre-line;
+}
+
+
+.mobileHeader {
+  border-top-left-radius: 6px !important;
+  border-top-right-radius: 6px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  margin-top: -16px !important;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+
+  :global {
+    .ant-card-body {
+      padding: 16px 0 0;
+    }
+  }
+}
+
+.mobileCover {
+  max-height: 280px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+  
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 70%;
+  }
+}
+
+.mobileRate {
+  display: flex;
+  align-items: center;
+  .rateText {
+    color: @heading-color;
+    font-weight: bold;
+  }
+  .rateValue {
+    margin-left: auto;
+  }
+}
+
+.mobileHeaderAction {
+  display: flex;
+  align-items: center;
+}
+
+.mobileToolbar {
+  position: fixed;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 10;
+  transition: all .3s;
+
+  .backIcon {
+    color: @primary-color;
+    font-size: 1rem;
+  }
+
+  .mobileToolbarTitle {
+    opacity: 0;
+    z-index: 2;
+    pointer-events:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    .text {
+      max-width: 75%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: @heading-color;
+      font-weight: bold;
+    }
+  }
+
+  &.toolbarActive {
+    background: @component-background;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    .mobileToolbarTitle {
+      opacity: 1;
+    }
+  }
+}
+
+.editLog {
+  .editLogEditor {
+  }
+  .editLogInfo {
+    color: @text-color-secondary;
+  }
+  & + & {
+    margin-top: 8px;
+    border-top: 1px dashed @border-color-base;
+    padding-top: 8px;
+  }
+}
+
+.moduleDetailHeader {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: fade(@menu-dark-bg, 100%);
+  transition: all .3s;
+
+  &.transparent {
+    box-shadow: none;
+    background-color: fade(@menu-dark-bg, 0%);
+    transition: all .3s;
+  }
+}
+
+.moduleDetailHeaderTitle {
+  max-width: calc(100% - 100px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendCard {
+  padding: 16px 0;
+  background-color: @component-background;
+  .recommendCardHeading {
+    color: @heading-color;
+    font-weight: bold;
+  }
+}

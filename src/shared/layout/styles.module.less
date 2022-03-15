@@ -1,0 +1,147 @@
+@import '~antd/lib/style/themes/dark.less';
+
+.searchInput {
+  background-color: rgba(0,0,0,0.25) !important;
+  border-radius: 20px !important;
+  :global {
+    .ant-input-group-addon {
+      background: transparent;
+      .ant-input-search-button {
+        border: 0;
+      }
+    }
+  }
+}
+
+.headerSearch {
+  display: flex;
+  align-items: center;
+}
+
+.headerSearchInput {
+  background-color: rgba(0,0,0,0.25) !important;
+  min-width: 240px;
+  border-radius: 20px !important;
+  :global {
+    .ant-input-group-addon {
+      background: transparent;
+      .ant-input-search-button {
+        color: @primary-color;
+        border: 0;
+      }
+    }
+  }
+}
+
+.appMobileHeader {
+  height: 44pt !important;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  padding: 0px !important;
+  background: @menu-dark-bg !important;
+  color: @text-color-inverse !important;
+  line-height: inherit !important;
+
+  &.transparent {
+    background: transparent !important;
+  }
+
+  .mobileHeaderContent {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .mobileHeaderSearch {
+    flex: 1;
+    margin: 0 16px;
+  }
+}
+
+.appMobileFooter {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  padding: 0px !important;
+  box-shadow: -2px -4px 10px rgba(0, 0, 0, 0.1);
+  height: 64px;
+  bottom: 0;
+}
+
+
+.mobileFooterMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mobileFooterMenuItem {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+
+  .mobileFooterMenuItemIcon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s;
+
+    .mobileFooterMenuItemTitle {
+      font-size: 12px;
+    }
+  }
+
+  :global {
+    :local(.mobileFooterMenuItemIcon):hover,
+    :local(.mobileFooterMenuItemIcon).active {
+      background: @primary-color;
+      color: @text-color-inverse;
+      box-shadow: 0px 0px 10px fade(@primary-color, 35%);
+      border-radius: 10px;
+    }
+
+    :local(.mobileFooterMenuItemIcon).active .anticon {
+      animation: swing; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 1s; /* don't forget to set a duration! */
+    }
+  }
+
+}
+
+.userBoxWrapper {
+  :global {
+    .ant-popover-inner-content {
+      padding: 0 !important;
+    }
+  }
+}
+
+.notificationIcon {
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  padding: 12px;
+  // border: 1px solid @heading-color;
+  color: @primary-color !important;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    box-shadow: 0px 0px 4px fade(@primary-color, 15%);
+    // border-color: @primary-color;
+    color: @heading-color !important;
+    background: @primary-color;
+  }
+}
