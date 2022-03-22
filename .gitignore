@@ -47,3 +47,5 @@ batchjudge_extract/
 db.sqlite3
 db/db.sqlite3
 
+/node_modules
+
