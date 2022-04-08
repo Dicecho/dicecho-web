@@ -196,7 +196,7 @@ const TopicContainer: React.FC = observer(() => {
                 )}
                 {topic.canEdit && (
                   <Popconfirm
-                    title="确定要删除这个评价么"
+                    title="确定要删除这个帖子么"
                     onConfirm={() => TopicSingleStore.deleteObj(topic._id).then(() => {
                       message.success('删除成功')
                       history.goBack()

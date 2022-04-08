@@ -38,7 +38,7 @@ const ReplyItem: React.FC<IProps> = ({
       {comment.canEdit && (
         <Menu.Item key="1">
           <Popconfirm
-            title="确定要删除这个评价么"
+            title="确定要删除这个评论么"
             onConfirm={() => CommentSingleStore.deleteObj(comment._id).then(() => {
               onDelete(comment.parentId, comment._id);
               message.success('删除成功')
